@@ -6,7 +6,7 @@ try {
 	const config = JSON.parse(str);
 	config.files.forEach((file) => {
 		const location = "/"+config.account+"/"+config.repository+"/"+file;
-		fetch.fetchUrl("http://cachegit.com/_",{method:"put",payload:location},(err,metadata,body) => {
+		fetch.fetchUrl("http://cachegit.com/_?"+location,{method:"delete"},(err,metadata,body) => {
 			if(err) {
 				console.log(err);
 			} else {
