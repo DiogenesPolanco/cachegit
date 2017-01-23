@@ -1,0 +1,24 @@
+{
+  "name": "cachegit",
+  "version": "0.0.1",
+  "description": "A CLI for the CacheGit caching service",
+  "engines": {
+    "node": "7.3.0"
+  },
+  "license": "MIT",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anywhichway/cachegit.git"
+  },
+  "keywords": [],
+  "author": "Simon Y. Blackwell <syblackwell@anywhichway.com> (http://www.github.com/anywhichway)",
+  "bugs": {
+    "url": "https://github.com/anywhichway/cachegit/issues"
+  },
+  "homepage": "https://github.com/anywhichway/cachegits#readme",
+  "devDependencies": {},
+  "dependencies": {
+    "fetch": "^1.1.0"
+  }
+}
