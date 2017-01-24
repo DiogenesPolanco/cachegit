@@ -1,6 +1,6 @@
 {
   "name": "cachegit",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A CLI for the CacheGit caching service",
   "engines": {
     "node": "7.3.0"
@@ -19,6 +19,7 @@
   "homepage": "https://github.com/anywhichway/cachegits#readme",
   "devDependencies": {},
   "dependencies": {
-    "fetch": "^1.1.0"
+    "fetch": "^1.1.0",
+    "git-rev": "^0.2.1"
   }
 }
