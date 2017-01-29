@@ -22,6 +22,7 @@ Create a file cachegit.json in the root of your repository using the format belo
 	]
 }
 ```
+You must push this file to GitHub with the rest of your respository or the CDN may return a 404 not found for requested files.
 
 # Use
 
@@ -42,13 +43,13 @@ The behavior of cachegit changes under the below conditions.
 
 ## Free Version, No Acknowledgement (You have not starred [CacheGit](http://cachegit.com))
 
-1. The master branch of a file is accessable through http://public.cachegit.com and http://free.cachegit.com
+1. The master branch of a file is accessable through public.cachegit.com and free.cachegit.com
 
-2. Composes the URL http://cachegit.com/:account/master/blob/master/<path>.
+2. Composes the URI cachegit.com/:account/master/blob/master/<path>.
 
 3. Tells the CDN to flush its cache for both public and free versions of the file.
 
-4. Stores minified but unmangled source on the CDN 3 days before requesting a new copy or until CacheGit is run again.
+4. Stores minified but unmangled source on the CDN for 3 days before requesting a new copy or until CacheGit is run again.
 
 5. Tells browsers to cache the file for 5 minutes.
 
@@ -56,13 +57,13 @@ Note: Writing a custom version of gitcache will not change the behavior, checks 
 
 ## Free Version, Acknowledgement (You have starred [CacheGit](http://cachegit.com))
 
-1. Specified branches of files are accessable through http://public.cachegit.com and http://free.cachegit.com
+1. Specified branches of files are accessable through public.cachegit.com and free.cachegit.com
 
-2. Composes the URL http://cachegit.com/:account/:respository/blob/:branch/:path</li>.
+2. Composes the URI cachegit.com/:account/:respository/blob/:branch/:path</li>.
 
 3. Tells the CDN to flush its cache for both public and free versions of the file.
 
-4. Stores minified but unmangled source on the CDN 3 days before requesting a new copy or until CacheGit is run again.
+4. Stores minified but unmangled source on the CDN for 3 days before requesting a new copy or until CacheGit is run again.
 
 5. Tells browsers to cache the file for 8 hours, improving end user experience.
 
