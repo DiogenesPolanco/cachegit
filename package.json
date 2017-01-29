@@ -1,6 +1,6 @@
 {
   "name": "cachegit",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A CLI for the CacheGit caching service",
   "engines": {
     "node": "7.3.0"
@@ -11,7 +11,13 @@
     "type": "git",
     "url": "git+https://github.com/anywhichway/cachegit.git"
   },
-  "keywords": [],
+  "keywords": [
+  	"CDN",
+  	"cache",
+  	"cloudflare",
+  	"maxcdn",
+  	"akamai"
+  ],
   "author": "Simon Y. Blackwell <syblackwell@anywhichway.com> (http://www.github.com/anywhichway)",
   "bugs": {
     "url": "https://github.com/anywhichway/cachegit/issues"

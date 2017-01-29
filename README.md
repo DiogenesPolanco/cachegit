@@ -1,24 +1,85 @@
 # cachegit
-A CLI for the CacheGit caching service
+A BETA CLI for the [CacheGit caching service](http://cachegit.com).
 
-# installation
+# Installation
+
+Install cachegit as a dev dependency in the repository where you wish to use it:
 
 npm install --save-dev cachegit
 
-# use
+# Setup
 
-node node_modules/cachegit/cachegit
-
-# file format
+Create a file cachegit.json in the root of your repository using the format below:
 
 ```
 {
-"account": "<GitHub Account>",
-"repository":"<repository>",
+"account": "anywhichway", // replace with your GitHub account name
+"repository":"test", // replace with you repository name
 "files": [
-	"test.js",
-	"dir/test.js",
-	"README.md"
+	"test.js", // will cache from root directory, replace with your file names
+	"dir/test.js", // will cache from subdirectory, replace with your paths
+	"README.md", // will print a Not Implemented message to console since it is not JavaScript
 	]
 }
 ```
+
+# Use
+
+In order to flush the CDN cache for the files in cachegit.json, manually run the below command
+line or add it to your build process after deploying the newest build to GitHub:
+
+node node_modules/cachegit/cachegit
+
+The behavior of cachegit changes under the below conditions.
+
+## Unmanaged Version (This CLI is not required)
+
+1. The master branch of a file is accessable through http://public.cachegit.com. See [website](http://www.cachegit.com) for instructions.
+
+2. Stores minified but unmangled source files on the CDN 3 days before requesting a new copy.
+
+3. Tells browsers to cache the file for 5 minutes.
+
+## Free Version, No Acknowledgement (You have not starred [CacheGit](http://cachegit.com))
+
+1. The master branch of a file is accessable through http://public.cachegit.com and http://free.cachegit.com
+
+2. Composes the URL http://cachegit.com/<account>/master/blob/master/<path>.
+
+3. Tells the CDN to flush its cache for both public and free versions of the file.
+
+4. Stores minified but unmangled source on the CDN 3 days before requesting a new copy or until CacheGit is run again.
+
+5. Tells browsers to cache the file for 5 minutes.
+
+Note: Writing a custom version of gitcache will not change the behavior, checks and re-writes are done on the server.
+
+## Free Version, Acknowledgement (You have starred [CacheGit](http://cachegit.com))
+
+1. Specified branches of files are accessable through http://public.cachegit.com and http://free.cachegit.com
+
+2. Composes the URL http://cachegit.com/<account>/<respository>/blob/<branch>/<path></li>.
+
+3. Tells the CDN to flush its cache for both public and free versions of the file.
+
+4. Stores minified but unmangled source on the CDN 3 days before requesting a new copy or until CacheGit is run again.
+
+5. Tells browsers to cache the file for 8 hours, improving end user experience.
+
+Note: Writing a custom version of gitcache will not change the behavior, checks and re-writes are done on the server.
+
+## Future Versions
+
+Future versions of CacheGit will provide more granular control over caching on a file by file basis.
+
+# Testing Cached Files
+
+If you are doing post deployment smoke testing make sure to clear your browser cache to ensure you get the most recent file copies.
+
+# Updates (reverse chronological order)
+
+2017-01-29 v0.0.4 Public BETA to go with service launch.
+
+# License
+
+MIT
