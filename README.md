@@ -35,7 +35,7 @@ The behavior of cachegit changes under the below conditions.
 
 ## Unmanaged Version (This CLI is not required)
 
-1. The master branch of a file is accessable through http://public.cachegit.com. See [website](http://www.cachegit.com) for instructions.
+1. The master branch of a file is accessable through `public.cachegit.com`. See [website](http://www.cachegit.com) for instructions.
 
 2. Stores minified but unmangled source files on the CDN 3 days before requesting a new copy.
 
@@ -43,9 +43,9 @@ The behavior of cachegit changes under the below conditions.
 
 ## Free Version, No Acknowledgement (You have not starred [CacheGit](http://cachegit.com))
 
-1. The master branch of a file is accessable through public.cachegit.com and free.cachegit.com
+1. The master branch of a file is accessable through `public.cachegit.com` and `free.cachegit.com`
 
-2. Composes the URI cachegit.com/:account/master/blob/master/<path>.
+2. Composes the URI `cachegit.com/:account/master/blob/master/<path>`.
 
 3. Tells the CDN to flush its cache for both public and free versions of the file.
 
@@ -57,9 +57,9 @@ Note: Writing a custom version of gitcache will not change the behavior, checks 
 
 ## Free Version, Acknowledgement (You have starred [CacheGit](http://cachegit.com))
 
-1. Specified branches of files are accessable through public.cachegit.com and free.cachegit.com
+1. Specified branches of files are accessable through `public.cachegit.com` and `free.cachegit.com`
 
-2. Composes the URI cachegit.com/:account/:respository/blob/:branch/:path</li>.
+2. Composes the URI `cachegit.com/:account/:respository/blob/:branch/:path`.
 
 3. Tells the CDN to flush its cache for both public and free versions of the file.
 
