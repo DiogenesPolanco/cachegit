@@ -44,7 +44,7 @@ The behavior of cachegit changes under the below conditions.
 
 1. The master branch of a file is accessable through http://public.cachegit.com and http://free.cachegit.com
 
-2. Composes the URL http://cachegit.com/<account>/master/blob/master/<path>.
+2. Composes the URL http://cachegit.com/:account/master/blob/master/<path>.
 
 3. Tells the CDN to flush its cache for both public and free versions of the file.
 
@@ -58,7 +58,7 @@ Note: Writing a custom version of gitcache will not change the behavior, checks 
 
 1. Specified branches of files are accessable through http://public.cachegit.com and http://free.cachegit.com
 
-2. Composes the URL http://cachegit.com/<account>/<respository>/blob/<branch>/<path></li>.
+2. Composes the URL http://cachegit.com/:account/:respository/blob/:branch/:path</li>.
 
 3. Tells the CDN to flush its cache for both public and free versions of the file.
 
