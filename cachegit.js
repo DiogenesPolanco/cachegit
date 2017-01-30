@@ -31,7 +31,7 @@ try {
 		const config = JSON.parse(str);
 		config.files.forEach((file) => {
 			const location = "/" + config.account + "/" + config.repository + "/" + file + "?cachegit=" + branch;
-			fetch.fetchUrl("https://" + config.account + ":none@managedcdn.cachegit.com" + location,{method:"delete"},(err,metadata,body) => {
+			fetch.fetchUrl("http://" + config.account + ":none@managedcdn.cachegit.com" + location,{method:"delete"},(err,metadata,body) => {
 				if(err) {
 					console.log(err);
 				} else {
