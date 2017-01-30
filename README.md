@@ -73,6 +73,13 @@ Note: Writing a custom version of gitcache will not change the behavior, checks 
 
 Future versions of CacheGit will provide more granular control over caching on a file by file basis.
 
+# Authentication
+
+The CacheGit CLI uses a mechanism similar to ACME with CNAMES or Google's domain validation through proof of control over a domain record. 
+It assumes the ability to define the contents of `cachegit.json` in a GitHub respository implies control over the repository and 
+the right to cache it in a CDN so long as the account specified in the `.json` file matches the account in the repository path and the 
+account transmitted by the CLI. As a result, no password is required to run the CLI.
+
 # Testing Cached Files
 
 If you are doing post deployment smoke testing make sure to clear your browser cache to ensure you get the most recent file copies.
