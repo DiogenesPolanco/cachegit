@@ -1,7 +1,7 @@
 {
   "name": "cachegit",
-  "version": "0.0.4",
-  "description": "A CLI for the CacheGit caching service",
+  "version": "0.0.5",
+  "description": "A CLI for the free CacheGit caching service",
   "engines": {
     "node": "7.3.0"
   },
@@ -16,6 +16,7 @@
   	"cache",
   	"cloudflare",
   	"maxcdn",
+  	"keycdn",
   	"akamai"
   ],
   "author": "Simon Y. Blackwell <syblackwell@anywhichway.com> (http://www.github.com/anywhichway)",
