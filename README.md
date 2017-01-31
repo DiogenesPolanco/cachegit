@@ -35,7 +35,7 @@ The behavior of cachegit changes under the below conditions.
 
 ## Unmanaged Version (This CLI is not required)
 
-1. The master branch of a file is accessable over https on `public.cachegit.com`. See [website](http://www.cachegit.com) for instructions.
+1. The master branch of a file less than 100K is accessable over https on `public.cachegit.com`. See [website](http://www.cachegit.com) for instructions.
 
 2. Stores minified but unmangled source files on the CDN 3 days before requesting a new copy.
 
@@ -43,7 +43,7 @@ The behavior of cachegit changes under the below conditions.
 
 ## Free Version, No Acknowledgement (You have not starred [CacheGit](http://cachegit.com))
 
-1. The master branch of a file is accessable over https on `public.cachegit.com` and `free.cachegit.com`
+1. The master branch of a file less that 100K is accessable over https on `public.cachegit.com` and `free.cachegit.com`
 
 2. Composes the URI `cachegit.com/:account/master/blob/master/<path>`.
 
@@ -57,7 +57,7 @@ Note: Writing a custom version of gitcache will not change the behavior, checks 
 
 ## Free Version, Acknowledgement (You have starred [CacheGit](http://cachegit.com))
 
-1. Specified branches of files are accessable over https on `public.cachegit.com` and `free.cachegit.com`
+1. Specified branches of files less than 150K are accessable over https on `public.cachegit.com` and `free.cachegit.com`
 
 2. Composes the URI `cachegit.com/:account/:respository/blob/:branch/:path`.
 
@@ -71,7 +71,7 @@ Note: Writing a custom version of gitcache will not change the behavior, checks 
 
 ## Future Versions
 
-Future versions of CacheGit will provide more granular control over caching on a file by file basis.
+Future versions of CacheGit will provide more granular control over caching on a file by file basis and support for larger files.
 
 # Authentication
 
